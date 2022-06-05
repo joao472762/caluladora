@@ -1,21 +1,24 @@
 var resposta = document.getElementById('display')
 var numeros = []
-var resultado = ''
-function insert(numero){
-    resposta.innerHTML += `${numero}`
-    resultado += numero
-    numeros.push(numero)
+
+function handleAddNumber(number){
+    display.textContent += number
 
 }
+let parentheseCount = 0
 
 function clean(){
-    resposta.innerHTML = ''
-    resultado = ''
+    display.textContent = ''
 }
 function back(){
-    resposta.sub
+    let display = document.getElementById('display')
+    let newDisplay = display.textContent.substring(0, display.textContent.length - 1);
+    
+    display.textContent = newDisplay
+   
+
 }
 function total(){ 
-    resposta.innerHTML = eval(resultado)
+    resposta.innerHTML = eval(display.textContent)
 
 }

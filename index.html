@@ -15,40 +15,41 @@
         <table>
             <tbody>
                 <tr>
-                    <td onclick="insert('1')">1</td>
+                    <td onclick="handleAddNumber('1')">1</td>
 
-                    <td onclick="insert('2')">2</td>
+                    <td onclick="handleAddNumber('2')">2</td>
 
-                    <td onclick="insert('3')">3</td>
+                    <td onclick="handleAddNumber('3')">3</td>
 
-                    <td onclick="insert('+')">+</td>
-                    <td>Del</td>
+                    <td onclick="handleAddNumber('+')">+</td>
+                    
+                    <td onclick="back()">Del</td>
                 </tr>
                 <tr>
 
-                    <td onclick="insert('4')">4</td>
+                    <td onclick="handleAddNumber('4')">4</td>
 
-                    <td onclick="insert('5')">5</td>
+                    <td onclick="handleAddNumber('5')">5</td>
 
-                    <td onclick="insert('6')">6</td>
+                    <td onclick="handleAddNumber('6')">6</td>
 
-                    <td onclick="insert('-')">-</td>
-                    <td onclick="insert('.')">.</td>
+                    <td onclick="handleAddNumber('-')">-</td>
+                    <td onclick="handleAddNumber('.')">.</td>
                 </tr>
                 <tr>
-                    <td onclick="insert('7')">7</td>
+                    <td onclick="handleAddNumber('7')">7</td>
 
-                    <td onclick="insert('8')">8</td>
+                    <td onclick="handleAddNumber('8')">8</td>
 
-                    <td onclick="insert('9')">9</td>
+                    <td onclick="handleAddNumber('9')">9</td>
 
-                    <td onclick="insert('/')">%</td>
+                    <td onclick="handleAddNumber('/')">%</td>
                     <td onclick="total()">=</td>
                 </tr>
                 <tr>
                     <td onclick="clean()">c</td>
-                    <td onclick="insert('0')">0</td>
-                    <td onclick="insert('*')"> X</td>
+                    <td onclick="handleAddNumber('0')">0</td>
+                    <td onclick="handleAddNumber('*')"> X</td>
                 </tr>
             </tbody>
         </table>
