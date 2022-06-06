@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>calculdor</title>
+    <script src='../javaScripts/script.js' defer></script>
+</head>
+<body>
+    <main>
+        <div id="display">
+            <p id="result"></p>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td onclick="Dom.handleAddChar('1')">1</td>
+
+                    <td onclick="Dom.handleAddChar('2')">2</td>
+
+                    <td onclick="Dom.handleAddChar('3')">3</td>
+
+                    <td onclick="Dom.handleAddChar('+')">+</td>
+                    
+                    <td onclick="Dom.deleteLastChar()">Del</td>
+                </tr>
+                <tr>
+
+                    <td onclick="Dom.handleAddChar('4')">4</td>
+
+                    <td onclick="Dom.handleAddChar('5')">5</td>
+
+                    <td onclick="Dom.handleAddChar('6')">6</td>
+
+                    <td onclick="Dom.handleAddChar('-')">-</td>
+                    <td onclick="Dom.handleAddChar('.')">.</td>
+                </tr>
+                <tr>
+                    <td onclick="Dom.handleAddChar('7')">7</td>
+
+                    <td onclick="Dom.handleAddChar('8')">8</td>
+
+                    <td onclick="Dom.handleAddChar('9')">9</td>
+
+                    <td onclick="Dom.handleAddChar('/')">%</td>
+                    <td rowspan="2" onclick="Dom.handleTotal()">=</td>
+                </tr>
+                <tr>
+                    <td onclick="Dom.deleteAllChars()">c</td>
+                    <td colspan="2" onclick="Dom.handleAddChar('0')">0</td>
+                    <td onclick="Dom.handleAddChar('*')"> X</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
