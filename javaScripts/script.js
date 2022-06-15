@@ -3,33 +3,29 @@ let result = document.getElementById('result')
 
 let HandleKeyboard = {
     updateDisplay(){
-        if(HandleKeyboard.isMathChar()){
-            return; 
-        }
-        
-        let resultArray = result.value.split('')
 
-        resultArray.pop()
-        
-        resultArray = Format.formatArray(resultArray)
-    
-        result.value = resultArray
+        let resultArray = result.value.split(separator='')
+
+        for(key in resultArray){
+        if(!HandleKeyboard.isMathChar(resultArray[key])){
+            resultArray.splice(key,1) 
+        }
+    }
+    result.value  = Format.formatArray(resultArray)
     },
     
-    isMathChar(){
-        let resultArray = result.value.split('')
-        let lastChar = (resultArray[resultArray.length -1])
-        let number = parseInt(lastChar)
+    isMathChar(char){
+        let number = parseInt(char)
         if(
-           HandleKeyboard.checkMathOperator(lastChar)
+           HandleKeyboard.checkMathOperator(char)
      
         ){
             return true
         }
-
+    
         let stringNumber = number.toString()
-
-
+    
+    
         if(stringNumber == 'NaN'){
             return false
         }
@@ -50,7 +46,6 @@ let HandleKeyboard = {
     }
 
 }
-
 let Format = {
      formatArray(array = []){
         let arrayFormated = array.join(separator='')
@@ -87,4 +82,7 @@ let Dom ={
     
 }
 
-result.addEventListener('keyup',HandleKeyboard.updateDisplay)
+
+
+result.addEventListener('input',HandleKeyboard.updateDisplay)
+
