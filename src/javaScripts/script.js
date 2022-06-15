@@ -82,7 +82,13 @@ let Dom ={
     
 }
 
-
+document.body.addEventListener('keydown',  (event)=> {
+    const key = event.key;
+    const code = event.keyCode;
+    if(code === 13){
+        Dom.handleTotal()
+    }
+  });
 
 result.addEventListener('input',HandleKeyboard.updateDisplay)
 
